@@ -1,0 +1,35 @@
+<h1>Modificar producto</h1>
+
+<form id="modifyProductForm">
+  <label>
+    Título <input type="text" name="title" id="inputTitle">
+  </label>
+  <label>
+    Descripción <input type="text" name="description" id="inputDescription">
+  </label>
+  <label>
+    Código <input type="text" name="code" id="inputCode">
+  </label>
+  <label>
+    Precio <input type="number" name="price" id="inputPrice">
+  </label>
+  <label>
+    Estado
+    <select name="status" id="inputStatus">
+      <option value="true">activo</option>
+      <option value="false">inactivo</option>
+    </select>
+  </label>
+  <label>
+    Stock <input type="number" name="stock" id="inputStock">
+  </label>
+  <label>
+    Categoría <input type="text" name="category" id="inputCategory">
+  </label>
+
+  <button type="submit">Modificar</button>
+</form>
+
+<p id="response"></p>
+
+<script src="/js/modifyProduct.js"></script>

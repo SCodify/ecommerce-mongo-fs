@@ -1,0 +1,36 @@
+<h1>Agregar nuevo producto</h1>
+
+<form id="createProductForm">
+  <label>
+    Título <input type="text" name="title" id="inputTitle">
+  </label>
+  <label>
+    Descripción <input type="text" name="description" id="inputDescription">
+  </label>
+  <label>
+    Código <input type="text" name="code" id="inputCode">
+  </label>
+  <label>
+    Precio <input type="number" name="price" id="inputPrice">
+  </label>
+  <label>
+    Estado
+    <select name="status" id="inputStatus" {{!--defaultValue="default"--}} >
+      {{!-- <option value="default">seleccione un estado</option> --}}
+      <option value="true">activo</option>
+      <option value="false">inactivo</option>
+    </select>
+  </label>
+  <label>
+    Stock <input type="number" name="stock" id="inputStock">
+  </label>
+  <label>
+    Categoría <input type="text" name="category" id="inputCategory">
+  </label>
+
+  <button type="submit">Cargar producto</button>
+</form>
+
+<p id="response"></p>
+
+<script src="/js/createProduct.js"></script>

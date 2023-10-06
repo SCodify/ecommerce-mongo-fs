@@ -1,0 +1,30 @@
+<h1>Productos</h1>
+
+<button id="alternarFiltro">Mostrar Inactivos</button>
+
+<div class="productos">
+    {{!-- 
+    
+    Si mandamos los datos en el res.render lo tenemos que hacer de esta manera, si los mandamos por medio de res.json lo tenemos que hacer con vanilla JS
+
+    {{#if products.length}} 
+        {{#each products}}
+            <div class="card__product" id={{this._id}}>
+                <p>titulo: {{this.title}}</p>
+                <p>descripción: {{this.description}}</p>
+                <p>code {{this.code}}</p>
+                <p>price {{this.price}}</p>
+                <p>status {{this.status}}</p>
+                <p>stock {{this.stock}}</p>
+                <p>category {{this.category}}</p>
+
+                <button class="borrar">Borrar</button>
+                <button class="modificar">Modificar</button>
+            </div>
+        {{/each}}
+    {{else}}
+        <p>No hay productos en la base de datos</p>
+    {{/if}} --}}
+</div>
+
+<script src="/js/productsList.js"></script>

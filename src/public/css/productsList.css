@@ -1,0 +1,11 @@
+.productos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+#alternarFiltro {
+  display: flex;
+  width: max-content;
+}
