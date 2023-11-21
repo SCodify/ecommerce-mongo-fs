@@ -3,6 +3,10 @@ const ProductsMongoDao = require('../DAOs/productsMongo.dao')
 
 const Products = new ProductsMongoDao()
 
+const CartsMongoDao = require('../DAOs/cartsMongo.dao')
+
+const Carts = new CartsMongoDao
+
 const router = Router()
 
 router.get('/create', async (req, res) => {
@@ -30,10 +34,7 @@ router.get('/modify', async (req, res) => {
 })
 
 router.get('/', async (req, res) => {
-  const estado = req.query.estado
-  console.log('estadoRouter: ', estado == 'true' ? true : false)
-  const products = await Products.findAllProducts(estado)
-  console.log('productsRouter: ', products)
+  const products = await Products.findAllProducts()
   res.json({ products })
 })
 
@@ -57,7 +58,7 @@ router.post('/', async (req, res) => {
       category,
     }
 
-    const newProduct = await Products.insertOne(newProductData)
+    const newProduct = await Products.insertOneProduct(newProductData)
     res.json({ message: newProduct })
   } catch (error) {
     // console.log(error)
